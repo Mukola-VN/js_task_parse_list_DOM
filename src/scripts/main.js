@@ -32,6 +32,7 @@ function sortList(itemsList) {
 }
 
 // тут уже оновлений NodeList який пройшов через sort ta forEach!!!!!
+sortList(list);
 
 const newlist = document.querySelectorAll('li');
 
@@ -46,7 +47,6 @@ function getEmployees(itemsList) {
   
 }
 
-sortList(list);
 
 const employees = getEmployees(newlist);
 
