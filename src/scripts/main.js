@@ -31,20 +31,24 @@ function sortList(itemsList) {
   });
 }
 
+// тут уже оновлений NodeList який пройшов через sort ta forEach!!!!!
+
+const newlist = document.querySelectorAll('li');
+
 function getEmployees(itemsList) {
-  // роблю employees масивом шоб працював метод map
-  // через map
+
   return Array.from(itemsList).map((el) => ({
     name: el.textContent,
     position: el.dataset.position,
     salary: parseSalary(el.dataset.salary),
     age: Number(el.dataset.age),
   }));
+  
 }
 
 sortList(list);
 
-const employees = getEmployees(list);
+const employees = getEmployees(newlist);
 
 // eslint-disable-next-line no-console
 console.log(employees);
